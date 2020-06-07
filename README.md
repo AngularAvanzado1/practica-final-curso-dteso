@@ -68,3 +68,8 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 yarn add --dev @nrwl/angular 
 
 
+
+***********************************************************************************
+  PS C:\Projects\TrainingIT\practica-final\practica-final-curso-dteso> git status
+
+  
