@@ -65,3 +65,6 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 - Una aplicación web estándar (sin Angular) que use el anterior componente.
 
+yarn add --dev @nrwl/angular 
+
+
