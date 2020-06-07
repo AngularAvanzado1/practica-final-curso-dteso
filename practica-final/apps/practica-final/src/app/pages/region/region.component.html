@@ -1,1 +1,32 @@
-<p>region works!</p>
+<div class="container">
+  <table>
+    <thead>
+      <th scope="id">
+        Name
+      </th>
+      <th scope="code">
+        <strong>Code</strong>
+      </th>
+      <th scope="code">
+        Capital
+      </th>
+      <th scope="actions">
+
+      </th>
+    </thead>
+    <tr *ngFor="let region of data">
+      <td style="padding-left: 1rem; padding-right: 1rem; border: solid gray 1px">
+        <h3>{{region.name}}</h3>
+      </td>
+      <td style="padding: 0.5rem; border: solid gray 1px">
+        <strong>{{region.id}} - {{region.iso2Code}}</strong>
+      </td>
+      <td style="padding: 0.5rem; border: solid gray 1px">
+        {{region.capitalCity}}
+      </td>
+      <td style="padding: 0.5rem; border: solid gray 1px">
+        <button style="cursor: pointer;" (click)="viewCountry(region.id)"> View Detail </button>
+      </td>
+    </tr>
+  </table>
+</div>

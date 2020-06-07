@@ -1,1 +1,32 @@
-<p>continent works!</p>
+<div class="container">
+  <table>
+    <thead>
+      <th scope="id">
+        ID
+      </th>
+      <th scope="code">
+        <strong>Code</strong>
+      </th>
+      <th scope="code">
+        Name
+      </th>
+      <th scope="actions">
+
+      </th>
+    </thead>
+    <tr *ngFor="let cont of data">
+      <td style="padding-left: 1rem; padding-right: 1rem; border: solid gray 1px">
+        <h3>{{cont.id}}</h3>
+      </td>
+      <td style="padding: 0.5rem; border: solid gray 1px">
+        <strong>{{cont.code}} - {{cont.iso2code}}</strong>
+      </td>
+      <td style="padding: 0.5rem; border: solid gray 1px">
+        {{cont.name}}
+      </td>
+      <td style="padding: 0.5rem; border: solid gray 1px">
+        <button style="cursor: pointer;" (click)="viewRegions(cont.code)"> View Regions </button>
+      </td>
+    </tr>
+  </table>
+</div>

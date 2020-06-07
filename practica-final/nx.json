@@ -25,6 +25,9 @@
     "practica-final-e2e": {
       "tags": [],
       "implicitDependencies": ["practica-final"]
+    },
+    "shared-api": {
+      "tags": []
     }
   }
 }

@@ -8,6 +8,7 @@ import { ContinentComponent } from './continent.component';
 @NgModule({
   declarations: [ContinentComponent],
   imports: [
+    CommonModule,
     ContinentRoutingModule
   ]
 })

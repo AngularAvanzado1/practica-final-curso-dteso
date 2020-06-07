@@ -8,6 +8,7 @@ import { CountryComponent } from './country.component';
 @NgModule({
   declarations: [CountryComponent],
   imports: [
+    CommonModule,
     CountryRoutingModule
   ]
 })
