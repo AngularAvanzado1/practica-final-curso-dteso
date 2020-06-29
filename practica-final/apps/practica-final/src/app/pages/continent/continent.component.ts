@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { ApiService } from "libs/shared/api/src/lib/api/api.service"
+import { ApiService } from "@a-final/data"
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,9 +17,7 @@ export class ContinentComponent implements OnInit {
     private readonly apiService: ApiService,
     private readonly router: Router,
     private readonly cdr: ChangeDetectorRef
-  ) {
-
-  }
+  ) { }
 
   ngOnInit() {
     this.apiService.getContinents$().subscribe(res => {

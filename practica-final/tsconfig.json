@@ -20,14 +20,6 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@practica-final/shared/api": [
-        "libs/shared/api/src/index.ts"
-      ],
-      "@a-final/data": [
-        "libs/shared/api/src/lib/index.ts"
-      ]
-    }
   },
   "exclude": [
     "node_modules",

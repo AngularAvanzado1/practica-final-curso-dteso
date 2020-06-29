@@ -1,6 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "types": ["node", "jest"]
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "paths": {
+    "@a-final/data": [
+      "libs/shared/api/src/index.ts"
+    ]
   }
 }
