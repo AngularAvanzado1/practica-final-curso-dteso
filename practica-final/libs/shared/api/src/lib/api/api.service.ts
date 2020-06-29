@@ -11,9 +11,6 @@ export class ApiService {
   private regionsURL = 'http://api.worldbank.org/v2/region/';
   private countryURL = 'http://api.worldbank.org/V2/country/'
 
-
-
-
   constructor(private httpClient: HttpClient) { }
 
   public getContinents$(): Observable<any> {

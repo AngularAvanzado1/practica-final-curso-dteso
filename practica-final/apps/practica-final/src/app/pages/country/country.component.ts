@@ -9,7 +9,7 @@ import { ApiService } from 'libs/shared/api/src/lib/api/api.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CountryComponent implements OnInit {
-
+  title = 'SELECTED COUNTRY';
   id;
   country;
 

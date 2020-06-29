@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContinentComponent implements OnInit {
-
+  title = 'CONTINENTS';
   continents: Array<any>;
   data: Array<any>;
 

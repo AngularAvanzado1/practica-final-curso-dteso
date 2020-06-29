@@ -9,7 +9,7 @@ import { ApiService } from 'libs/shared/api/src/lib/api/api.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RegionComponent implements OnInit {
-
+  title = 'REGIONS';
   code: any;
   regions: any[];
   data: any[];

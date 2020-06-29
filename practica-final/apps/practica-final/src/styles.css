@@ -3,4 +3,8 @@
 .table-header-contrast{
   color: white;
   background-color: black;
-  }
+}
+
+.text-center{
+  text-align: center;
+}

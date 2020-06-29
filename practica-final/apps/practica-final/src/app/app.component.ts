@@ -7,13 +7,10 @@ import { ApiService } from "../../../../libs/shared/api/src/lib/api/api.service"
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'practica-final';
-
+  title = 'CONTINENTS';
   continents;
 
-  constructor(private apiService: ApiService) {
-
-  }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.apiService.getContinents$().subscribe(res => {
