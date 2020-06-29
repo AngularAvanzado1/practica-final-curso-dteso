@@ -1,10 +1,10 @@
 <div *ngIf="!country" style="text-align: center;">
   <h1>L O A D I N G . . . </h1>
 </div>
-<div [hidden]="!country" style="border: solid black 1px; border-radius: 5%;">
+<div [hidden]="!country" style="border: solid black 1px; border-radius: 3%;">
   <div style="padding: 1rem; text-align: center;">
     <h1 style="background-color: gray; padding:0.5rem; color: white">{{country?.name}}</h1>
-    <h3 style="background-color: gray; padding:0.5rem">Capital {{country?.capitalCity}}</h3>
+    <h3 style="background-color: gray; padding:0.5rem">Capital in {{country?.capitalCity}}</h3>
     <div>
       <p>Latitude: {{country?.latitude}}</p>
       <p>Longitude: {{country?.longitude}}</p>

@@ -8,10 +8,5 @@
   },
   "include": [
     "**/*.ts"
-  ],
-  "paths": {
-    "@a-final/data": [
-      "libs/shared/api/src/lib/index.ts"
-    ]
-  }
+  ]
 }

@@ -1,0 +1,11 @@
+
+.custom-id-col{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: solid gray 1px;
+}
+
+.custom-col{
+  padding: 0.5rem;
+  border: solid gray 1px;
+}

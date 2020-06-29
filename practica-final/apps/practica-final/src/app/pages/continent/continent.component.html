@@ -1,30 +1,35 @@
-<div class="container">
-  <table>
-    <thead>
+<div *ngIf="!data" style="text-align: center;">
+  <h1>L O A D I N G . . . </h1>
+</div>
+<div [hidden]="!data">
+  <table name='continents-table'>
+    <thead class="table-header-contrast">
       <th scope="id">
-        ID
+        <h3>ID</h3>
       </th>
       <th scope="code">
-        <strong>Code</strong>
+        <h3>Code</h3>
       </th>
       <th scope="code">
-        Name
+        <h3>
+          Name
+        </h3>
       </th>
       <th scope="actions">
 
       </th>
     </thead>
     <tr *ngFor="let cont of data">
-      <td style="padding-left: 1rem; padding-right: 1rem; border: solid gray 1px">
+      <td class="custom-id-col">
         <h3>{{cont.id}}</h3>
       </td>
-      <td style="padding: 0.5rem; border: solid gray 1px">
+      <td class="custom-col">
         <strong>{{cont.code}} - {{cont.iso2code}}</strong>
       </td>
-      <td style="padding: 0.5rem; border: solid gray 1px">
+      <td class="custom-col">
         {{cont.name}}
       </td>
-      <td style="padding: 0.5rem; border: solid gray 1px">
+      <td class="custom-col">
         <button style="cursor: pointer;" (click)="viewRegions(cont.code)"> View Regions </button>
       </td>
     </tr>
