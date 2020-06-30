@@ -8,7 +8,8 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store'
+import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
+import { ServiceWorkerModule } from '@angular/service-worker'
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,7 +31,8 @@ import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store'
     ),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreRouterConnectingModule.forRoot()
+    StoreRouterConnectingModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],

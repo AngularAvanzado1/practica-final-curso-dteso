@@ -19,7 +19,8 @@
             "aot": true,
             "assets": [
               "apps/practica-final/src/favicon.ico",
-              "apps/practica-final/src/assets"
+              "apps/practica-final/src/assets",
+              "apps/practica-final/src/manifest.webmanifest"
             ],
             "styles": ["apps/practica-final/src/styles.css"],
             "scripts": []
@@ -51,7 +52,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/practica-final/ngsw-config.json"
             }
           }
         },
