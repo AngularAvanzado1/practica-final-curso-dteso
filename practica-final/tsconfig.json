@@ -24,5 +24,10 @@
   "exclude": [
     "node_modules",
     "tmp"
-  ]
+  ],
+  "paths": {
+    "@a-final/data": [
+      "libs/shared/api/src/index.ts"
+    ]
+  }
 }

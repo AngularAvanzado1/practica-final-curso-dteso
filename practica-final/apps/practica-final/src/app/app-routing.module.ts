@@ -20,6 +20,7 @@ const routes: Routes = [
     path: 'country/:id',
     loadChildren: () => import('../app/pages/country/country.module').then(m => m.CountryModule),
   },
+  { path: 'geographics', loadChildren: () => import('./geographics/geographics.module').then(m => m.GeographicsModule) },
   {
     path: '**',
     redirectTo: 'home'

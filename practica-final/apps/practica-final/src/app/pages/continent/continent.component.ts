@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { ApiService } from "@a-final/data"
+import { ApiService } from "libs/shared/api/src/lib/api/api.service"
 import { Router } from '@angular/router';
 
 @Component({
