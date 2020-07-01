@@ -31,9 +31,6 @@ export class AppComponent implements OnInit {
         console.log('Checking for Updates...');
       });
       this.swUpdate.available.subscribe(event => {
-        if (event) {
-          alert(JSON.stringify(event));
-        }
         if (event.available.appData) {
           const appData: any = event.available.appData;
           let msg = `New version ${appData.version} available.`;
