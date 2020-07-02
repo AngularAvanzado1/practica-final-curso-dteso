@@ -4,7 +4,7 @@
 <div [hidden]="!country" class="main-card">
   <div style="padding: 1rem; text-align: center;">
     <h1 class="country-title">{{country?.name}}</h1>
-    <h3 class="capital-title">Capital in {{country?.capitalCity}}</h3>
+    <h3 *ngIf="country?.capitalCity" class="capital-title">Capital in {{country?.capitalCity}}</h3>
     <div>
       <p>Latitude: {{country?.latitude}}</p>
       <p>Longitude: {{country?.longitude}}</p>
