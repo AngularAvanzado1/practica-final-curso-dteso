@@ -32,9 +32,9 @@ export class AppComponent implements OnInit {
       this.swUpdate.available.subscribe(event => {
         if (event.available.appData) {
           const appData: any = event.available.appData;
-          let msg = `New version ${appData.version} available.`;
+          let msg = `New version ${appData.version} available./n Features added: ${appData.changelog}`;
           msg += `${appData.changelog}.`;
-          msg += 'Reaload?';
+          msg += ` Reload?`;
           if (confirm(msg)) {
             window.location.reload();
           }
