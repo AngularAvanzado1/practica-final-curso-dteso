@@ -12,6 +12,7 @@ export class ContinentComponent implements OnInit {
   title = 'CONTINENTS';
   continents: Array<any>;
   data: Array<any>;
+  headers = ['id', 'code', 'name', 'actions'];
 
   constructor(
     private readonly apiService: ApiService,
@@ -29,6 +30,10 @@ export class ContinentComponent implements OnInit {
 
   viewRegions(code: string) {
     this.router.navigate([`/region/${code}`]);
+  }
+
+  onEvent(evt) {
+    this.viewRegions(evt.code);
   }
 
 }

@@ -1,0 +1,21 @@
+<div *ngIf="!data" style="text-align: center;">
+  <h1 class="main-gray">L O A D I N G . . . </h1>
+</div>
+<div [hidden]="!data">
+  <h1 class="main-blue">{{title}}</h1>
+  <table aria-describedby="table-regions">
+    <thead class="table-header-contrast">
+      <th scope="header" *ngFor="let header of headers; index as i">
+        <h3>{{header}}</h3>
+      </th>
+    </thead>
+    <tr *ngFor="let item of data">
+      <td class="custom-col" *ngFor="let header of headers; index as i">
+        <p *ngIf="header !== 'actions' else showBtnTemplate">{{item[header]}}</p>
+        <ng-template #showBtnTemplate>
+          <button class="action-button-class" (click)="emitItem(item)"> View / Next </button>
+        </ng-template>
+      </td>
+    </tr>
+  </table>
+</div>

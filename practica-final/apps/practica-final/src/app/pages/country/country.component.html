@@ -1,17 +1,15 @@
-<div *ngIf="!country" style="text-align: center;">
+<div *ngIf="!country" class="text-center">
   <h1>L O A D I N G . . . </h1>
 </div>
-<div [hidden]="!country" style="border: solid black 1px; border-radius: 3%;">
+<div [hidden]="!country" class="main-card">
   <div style="padding: 1rem; text-align: center;">
-    <h1 style="background-color: gray; padding:0.5rem; color: white">{{country?.name}}</h1>
-    <h3 style="background-color: gray; padding:0.5rem">Capital in {{country?.capitalCity}}</h3>
+    <h1 class="country-title">{{country?.name}}</h1>
+    <h3 class="capital-title">Capital in {{country?.capitalCity}}</h3>
     <div>
       <p>Latitude: {{country?.latitude}}</p>
       <p>Longitude: {{country?.longitude}}</p>
       <p><strong>Region {{country?.region.value}} - {{country?.region.id}}</strong></p>
     </div>
-    <button
-      style="width: 5rem; height: 2rem; color: white; background-color: tomato; border: 0; border-radius: 5%; cursor: pointer;"
-      (click)="onBack()">Back</button>
+    <button class="action-button-class" (click)="onBack()">Back</button>
   </div>
 </div>

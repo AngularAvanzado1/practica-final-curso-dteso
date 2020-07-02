@@ -13,6 +13,7 @@ export class RegionComponent implements OnInit {
   code: any;
   regions: any[];
   data: any[];
+  headers = ['name', 'id', 'capitalCity', 'actions'];
 
 
   constructor(
@@ -37,6 +38,11 @@ export class RegionComponent implements OnInit {
   viewCountry(id: string) {
     this.router.navigate([`/country/${id}`]);
   }
+
+  onEvent(evt) {
+    this.viewCountry(evt.id);
+  }
+
 
 }
 
