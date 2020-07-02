@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../../../libs/shared/api/src/lib/api/api.service";
-import { SwUpdate, SwPush } from '@angular/service-worker';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'practica-final-root',
@@ -13,8 +13,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    private swUpdate: SwUpdate,
-    private swPush: SwPush
+    private swUpdate: SwUpdate
   ) {
     this.checkVersionUpdates();
   }
