@@ -1,0 +1,23 @@
+.custom-col{
+  min-width: 3rem;
+  padding: 1rem;
+  border-bottom: solid rgb(17, 147, 190) 1px;
+  text-align: center;
+  color: gray
+}
+
+
+.table-header-contrast{
+  color: white;
+  background-color:  rgb(17, 147, 190);
+}
+
+.action-button-class{
+  cursor: pointer;
+  background-color: white;
+  border: 0.5px solid turquoise;
+  color:  rgb(17, 147, 190);
+  border-radius: 5%;
+  min-width: 7rem;
+  padding: 0.5rem;
+}

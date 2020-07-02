@@ -1,10 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-.table-header-contrast{
-  color: white;
-  background-color: black;
-}
-
 .text-center{
   text-align: center;
+}
+
+.main-blue{
+  color:  rgb(17, 147, 190);
+}
+
+.main-gray{
+  color:  rgb(17, 147, 190);
+}
+
+.home-btn{
+  margin-bottom: 1rem;
+  color: whitesmoke;
+  background-color: teal;
+   width: 6rem; height: 2.5rem;
+   cursor: pointer;
+   border:0;
+   border-radius: 5%;
 }

@@ -1,0 +1,35 @@
+.action-button-class{
+  cursor: pointer;
+  background-color: white;
+  border: 0.5px solid turquoise;
+  color:  rgb(17, 147, 190);
+  border-radius: 5%;
+  min-width: 7rem;
+  padding: 0.5rem;
+}
+
+
+.main-card{
+  background-color: rgb(17, 147, 190);
+  padding:0.5rem;
+  border: 0.5px solid turquoise;
+  color:  white;
+  border-radius: 5px;
+}
+
+
+.country-title{
+  background-color: transparent;
+  padding:0.5rem;
+  border: 0.5px solid turquoise;
+  color: white;
+  border-radius: 5px;
+}
+
+.capital-title{
+  background-color: turquoise;
+  padding:0.5rem;
+  border: 0.5px solid  rgb(17, 147, 190);
+  color:  rgb(17, 147, 190);
+  border-radius: 5px;
+}
