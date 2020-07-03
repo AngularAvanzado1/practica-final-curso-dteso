@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContinentComponent } from './continent.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TablePresenterModule } from '../../components/table-presenter/table-presenter.module';
 
 describe('ContinentComponent', () => {
   let component: ContinentComponent;
@@ -8,18 +11,17 @@ describe('ContinentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContinentComponent ]
+      imports: [
+        RouterTestingModule,
+        HttpClientTestingModule,
+        TablePresenterModule],
+      declarations: [ContinentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
-
-  beforeEach(() => {
+  it('should create the component', () => {
     fixture = TestBed.createComponent(ContinentComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    const continentComponent = fixture.componentInstance;
+    expect(continentComponent).toBeTruthy();
   });
 });
