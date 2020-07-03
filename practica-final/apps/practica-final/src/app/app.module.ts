@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Inject, PLATFORM_ID, APP_ID } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { isPlatformBrowser } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,4 +38,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(APP_ID) private serverApp: string
+  ) {
+    const platform = isPlatformBrowser(this.platformId) ? 'browser' : 'server';
+    console.log("Current Platform (browser/server) ----> " + platform);
+  }
+}
