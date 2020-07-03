@@ -11,7 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/practica-final",
+            "outputPath": "dist/practica-final/browser",
             "index": "apps/practica-final/src/index.html",
             "main": "apps/practica-final/src/main.ts",
             "polyfills": "apps/practica-final/src/polyfills.ts",
@@ -92,6 +92,53 @@
             "tsConfig": "apps/practica-final/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "apps/practica-final/src/test-setup.ts"
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/practica-final/server",
+            "main": "apps/practica-final/server.ts",
+            "tsConfig": "apps/practica-final/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "apps/practica-final/src/environments/environment.ts",
+                  "with": "apps/practica-final/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "practica-final:build",
+            "serverTarget": "practica-final:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "practica-final:build:production",
+              "serverTarget": "practica-final:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "practica-final:build:production",
+            "serverTarget": "practica-final:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
