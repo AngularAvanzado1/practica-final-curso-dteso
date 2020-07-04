@@ -32,7 +32,7 @@ ng test shared-api   ---> para ejecutar TESTS DE SERVICIOS
 
 ng test practica-final ---> para ejecutar TESTS UNITARIOS de las páginas 
 
-## NgRx
+### NgRx
 
 Se dispone de un Store que centraliza la gestión del estado de la aplicación. 
 
