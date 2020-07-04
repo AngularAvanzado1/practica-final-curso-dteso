@@ -33,7 +33,10 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run practica-final:server:production --bundleDependencies all",
     "compile:server": "webpack --config webpack.server.config.js --progress --  colors",
-    "serve:ssr": "node dist/practica-final/server/main.js"
+    "serve:ssr": "node dist/practica-final/server/main.js",
+    "i18n:practica-final": "ng xi18n practica-final --output-path src/locale",
+    "build:practica-final-es": "ng build practica-final --configuration=production-es",
+    "start:practica-final-es": "npm run build:practica-final-es && angular-http-server --path ./dist/apps/practica-final/es"
   },
   "private": true,
   "dependencies": {

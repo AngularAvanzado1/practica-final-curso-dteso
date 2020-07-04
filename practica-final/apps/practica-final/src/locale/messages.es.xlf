@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="d902396069e99602c0324be26c7c401c36460e0b" datatype="html">
+        <source>Locations from &apos;The World Bank&apos; API </source>
+        <target>Localizaciones desde la API del Banco Mundial </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="51697986f0ac57d61098166d3ea2d49999e8ed64" datatype="html">
+        <source>
+    Home </source>
+            <target>
+    Inicio </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="37da4fc1865f0e0fb35d915d90a4f1bb9af961ed" datatype="html">
+        <source>L O A D I N G . . . </source>
+        <target>C A R G A N D O . . .</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/table-presenter/table-presenter.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b0dd03827e2b40924c27365000ca15786c9c5349" datatype="html">
+        <source> View / Next </source>
+        <target> Ver / Sig. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/table-presenter/table-presenter.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ad5286fd4e53839ba9961cc0308eae694809b98" datatype="html">
+        <source>Press here if you want to get a json loaded throught NgRx</source>
+        <target>Pulse aquí para cargar estos datos a través de NgRx</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/continent/continent.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="cda31dbd724cf5f4fa7a4274d9120651490c8a8c" datatype="html">
+        <source>Back</source>
+        <target>Volver</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/country/country.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

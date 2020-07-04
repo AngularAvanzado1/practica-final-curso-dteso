@@ -4,7 +4,7 @@ describe('practica-final', () => {
   describe('home(continents)', () => {
     beforeEach(() => cy.visit('/'));
     it('should display header defined message', () => {
-      getHeader().contains("Geograpfics from 'The World Bank' API");
+      getHeader().contains("Locations from 'The World Bank' API");
     });
     it('should show a home button', () => {
       getButton().contains("Home");

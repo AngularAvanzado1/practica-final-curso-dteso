@@ -22,7 +22,9 @@
               "apps/practica-final/src/assets",
               "apps/practica-final/src/manifest.webmanifest"
             ],
-            "styles": ["apps/practica-final/src/styles.css"],
+            "styles": [
+              "apps/practica-final/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -55,6 +57,19 @@
               ],
               "serviceWorker": true,
               "ngswConfigPath": "apps/practica-final/ngsw-config.json"
+            },
+            "production-es": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/practica-final/src/environments/environment.ts",
+                  "with": "apps/practica-final/src/environments/environment.prod.es.ts"
+                }
+              ],
+              "outputPath": "dist/apps/practica-final/es/",
+              "i18nFile": "apps/practica-final/src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "baseHref": "es"
             }
           }
         },
@@ -82,7 +97,10 @@
               "apps/practica-final/tsconfig.app.json",
               "apps/practica-final/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/practica-final/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/practica-final/**"
+            ]
           }
         },
         "test": {
@@ -164,8 +182,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/practica-final-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/practica-final-e2e/**"]
+            "tsConfig": [
+              "apps/practica-final-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/practica-final-e2e/**"
+            ]
           }
         }
       }
@@ -183,7 +206,10 @@
               "libs/shared/api/tsconfig.lib.json",
               "libs/shared/api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/api/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/api/**"
+            ]
           }
         },
         "test": {
