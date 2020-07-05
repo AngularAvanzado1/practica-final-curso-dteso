@@ -29,6 +29,7 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "build:pwa": "ng build --prod",
     "localhost-prod": "angular-http-server -p 8080 --path ./dist/practica-final/browser",
     "start:ssr": "npm run build:ssr && npm run serve:ssr",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",

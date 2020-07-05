@@ -1,11 +1,11 @@
 # WORLD BANK API LOCATIONS
 
-## Antes de arrancar el proyecto:
+## Antes de arrancar el proyecto instalar con:
 
-npm i
+      npm i
 
-### CONTAINER PRESENTER
-## Arquitectura
+### ARQUITECTURA
+## Container-Presenter
 
 APLICACIÓN: practica-final
  
@@ -14,14 +14,17 @@ APLICACIÓN: practica-final
           - region.component
           - country.component
 
-    Utilizan 'OnPush' como estrategia de detección de cambio
+    *Utilizan 'OnPush' como estrategia de detección de cambio
 
-    PRESENTER: apps/practica-final/src/app/components
+    PRESENTER: apps/practica-final/src/app/components:
           -table-presenter.component
 
-LIBRERIAS: libs
-      shared/api ---> src/lib/api
+LIBRERIAS: libs/shared/api/src/lib/api
           -api.service ( httpClient )
+
+## Arrancar proyecto en 'Desarrollo'
+
+      "npm run start" ó  "ng serve"
 
 
 ### TEST'S
@@ -51,9 +54,9 @@ Esto se encuentra implementado en el componente app/geographics y su código en 
 
 ### PWA 
 
-        ng build --prod ---> genera dist en dist/practica-final/browser
+        "npm run build:pwa" ó "ng build --prod" ---> genera dist en dist/practica-final/browser
 
-        "localhost-prod": "angular-http-server -p 8080 --path ./dist/practica-final/browser"   ---> Arranca angular-http-server localmente en modo prod en el puerto 8080
+        "npm run localhost-prod" ó "angular-http-server -p 8080 --path ./dist/practica-final/browser"   ---> Arranca angular-http-server localmente en modo prod en el puerto 8080
 
 Se ha cofigurado el modo de instalación en lazy así como un mensaje para preguntar por la actualización y una comprobación de opciones 
 disponibles. 
@@ -72,9 +75,9 @@ Se sugiere marcar la opción 'Update on reload' dentro del inspector de Chrome/A
 
 Angular Universal
 
-        npm run build:client-and-server-bundles  ---> Genera build en dist/practica-final/server
+        "npm run build" ó "client-and-server-bundles"  ---> Genera build en dist/practica-final/server
 
-        node dist/practica-final/server/main.js   ---> Arranca node server en el puerto 4000
+        "serve:ssr" ó "node dist/practica-final/server/main.js"   ---> Arranca node server en el puerto 4000
 
 Arrancado, se puede comprobar si la carga de la página se está haciendo desde el server o el browser comprobando la consola 
 (al estar arrancado el server aparecerá 'server').
