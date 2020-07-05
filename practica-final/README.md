@@ -75,12 +75,47 @@ Se sugiere marcar la opción 'Update on reload' dentro del inspector de Chrome/A
 
 Angular Universal
 
-        "npm run build" ó "client-and-server-bundles"  ---> Genera build en dist/practica-final/server
+        "npm run build:client-and-server-bundles" ó "ng build --prod && ng run practica-final:server:production --bundleDependencies all"  ---> Genera build en dist/practica-final/server
 
         "serve:ssr" ó "node dist/practica-final/server/main.js"   ---> Arranca node server en el puerto 4000
 
 Arrancado, se puede comprobar si la carga de la página se está haciendo desde el server o el browser comprobando la consola 
 (al estar arrancado el server aparecerá 'server').
+
+### INTERNACIONALIZACIÓN
+
+- Ejecutar 
+
+        "npm run start:practica-final-es" ó "npm run build:practica-final-es && angular-http-server --path ./dist/apps/practica-final/es"
+
+Abrir localhost:8080. Arrancará en localhost:8080/es/home
+
+NOTAS:
+
+        "i18n:practica-final": "ng xi18n practica-final --output-path src/locale"
+
+        Generar carpeta locale que contiene el fichero messages.xlf y hacer su copia con sus respectivos target
+        en el mesages.[idioma].xlf 
+
+        Añadir configuracion en el angular.json
+
+                "production-es": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/practica-final/src/environments/environment.ts",
+                      "with": "apps/practica-final/src/environments/environment.prod.es.ts"
+                    }
+                  ],
+                  "outputPath": "dist/apps/practica-final/es/",
+                  "i18nFile": "apps/practica-final/src/locale/messages.es.xlf",
+                  "i18nFormat": "xlf",
+                  "i18nLocale": "es",
+                  "baseHref": "es"
+                }
+
+        Compila el proyecto indicado con la configuración que se haya especificado en el angular.json
+
+          "build:practica-final-es": "ng build practica-final --configuration=production-es"
 
 
 ### WEB COMPONENTS 
@@ -115,40 +150,7 @@ Recomendable ejecutar:
         ng build --prod --single-bundle --project wbde-country ---> single bundle
 
 
-### INTERNACIONALIZACIÓN
 
-- Ejecutar 
-
-        "start:practica-final-es" ó "npm run build:practica-final-es && angular-http-server --path ./dist/apps/practica-final/es"
-
-Abrir localhost:8080. Arrancará en localhost:8080/es/home
-
-NOTAS:
-
-        "i18n:practica-final": "ng xi18n practica-final --output-path src/locale"
-
-        Generar carpeta locale que contiene el fichero messages.xlf y hacer su copia con sus respectivos target
-        en el mesages.[idioma].xlf 
-
-        Añadir configuracion en el angular.json
-
-                "production-es": {
-                  "fileReplacements": [
-                    {
-                      "replace": "apps/practica-final/src/environments/environment.ts",
-                      "with": "apps/practica-final/src/environments/environment.prod.es.ts"
-                    }
-                  ],
-                  "outputPath": "dist/apps/practica-final/es/",
-                  "i18nFile": "apps/practica-final/src/locale/messages.es.xlf",
-                  "i18nFormat": "xlf",
-                  "i18nLocale": "es",
-                  "baseHref": "es"
-                }
-
-        Compila el proyecto indicado con la configuración que se haya especificado en el angular.json
-
-          "build:practica-final-es": "ng build practica-final --configuration=production-es"
 
 
 
