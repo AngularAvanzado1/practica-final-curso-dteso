@@ -40,7 +40,7 @@ Se puede visualizar el proceso a través de las Redux DevTools ( extensión Chro
 
 Una vez arrancado el proyecto, en el propia página de inicio se dispone de un enlace que realiza la carga de continentes a través del patrón ngrx
 
-Esto se encuentra implementado en el componente app/geographics y su código en la subcarpeta store donde se implementan acciones, selector, reducer y efecto.
+Esto se encuentra implementado en el componente app/geographics y su código en la subcarpeta /store donde se implementan acciones, selector, reducer y efecto.
 
 
 ### PWA 
@@ -56,7 +56,7 @@ Se puede probar dicha actualizacióncuando existan cambios en la aplicación
 
 En el ngsw-config.json modificar la versión de la aplicación
 
-Levantar en modo producción ( imprescindible ) con los comandos indicados arriba para comprobvar funcionamiento.
+Levantar en modo producción ( imprescindible ) con los comandos indicados arriba para comprobar funcionamiento.
 
 Se sugiere marcar la opción 'Update on reload' dentro del inspector de Chrome/Aplicaciones/Service Workers para realizar la prueba
 
@@ -66,9 +66,7 @@ Se sugiere marcar la opción 'Update on reload' dentro del inspector de Chrome/A
 
 Angular Universal
 
-        npm run build:ssr
-
-        npm run build:client-and-server-bundles
+        npm run build:client-and-server-bundles  ---> Genera build en dist/practica-final/server
 
         node dist/practica-final/server/main.js   ---> Arranca node server en el puerto 4000
 
@@ -112,7 +110,7 @@ Recomendable ejecutar:
 
 - Ejecutar 
 
-"start:practica-final-es": "npm run build:practica-final-es && angular-http-server --path ./dist/apps/practica-final/es"
+        "start:practica-final-es" ó "npm run build:practica-final-es && angular-http-server --path ./dist/apps/practica-final/es"
 
 Abrir localhost:8080. Arrancará en localhost:8080/es/home
 
