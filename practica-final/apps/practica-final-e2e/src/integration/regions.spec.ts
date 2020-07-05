@@ -13,8 +13,10 @@ describe('regions', () => {
     getTable().find('tr');
   });
   it('should show a home button', () => {
-    getButton().contains("Home");
+    getButton().contains("Home").click();
+    cy.url().should('include', '/home');
   });
+  after(() => cy.visit('/'));
   it('each view/next button of table should be renderized and navigate from /region to his corresponding /country', () => {
     getTable().get('.action-button-class').contains('View / Next').click();
     cy.url().should('include', '/country');

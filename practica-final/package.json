@@ -12,6 +12,7 @@
     "e2e": "ng e2e",
     "e2e:practica-final": "ng e2e practica-final-e2e --watch",
     "test:services": "ng test shared-api",
+    "test:pages": "ng test practica-final",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",

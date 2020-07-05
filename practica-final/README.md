@@ -26,6 +26,12 @@ LIBRERIAS: libs
 
 ### TEST'S
 
+      "e2e:practica-final": "ng e2e practica-final-e2e --watch",
+
+      "test:services": "ng test shared-api",
+
+      "test:pages": "ng test practica-final",
+
 ng e2e practica-final-e2e --watch ----> para ejecutar test e2e de navegacion completa por todas las páginas en practica-final-e2e/src/integration
 
 ng test shared-api   ---> para ejecutar TESTS DE SERVICIOS
