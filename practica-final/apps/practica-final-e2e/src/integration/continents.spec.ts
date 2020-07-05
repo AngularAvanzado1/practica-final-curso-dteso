@@ -18,7 +18,7 @@ describe('cotinents', () => {
     getTable().get('.action-button-class').contains('View / Next').click();
     cy.url().should('include', '/region');
   });
-  it('link must redirect to /geograpphics page', () => {
+  it('link must redirect to /geographics page', () => {
     getLink().click();
     cy.url().should('include', '/geographics');
   });
