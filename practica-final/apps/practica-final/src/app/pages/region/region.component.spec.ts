@@ -6,7 +6,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TablePresenterModule } from '../../components/table-presenter/table-presenter.module';
 
 describe('RegionComponent', () => {
-  let component: RegionComponent;
+  let regionComponent: RegionComponent;
   let fixture: ComponentFixture<RegionComponent>;
 
   beforeEach(async(() => {
@@ -20,8 +20,8 @@ describe('RegionComponent', () => {
       .compileComponents();
   }));
   it('should create the component', () => {
-    const fixture = TestBed.createComponent(RegionComponent);
-    const regionComponent = fixture.componentInstance;
+    fixture = TestBed.createComponent(RegionComponent);
+    regionComponent = fixture.componentInstance;
     expect(regionComponent).toBeTruthy();
   });
 });
