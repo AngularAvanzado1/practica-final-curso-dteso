@@ -45,9 +45,9 @@ Esto se encuentra implementado en el componente app/geographics y su código en 
 
 ### PWA 
 
-ng build --prod
+        ng build --prod ---> genera dist en dist/practica-final/browser
 
-npm run localhost-prod   ---> Arranca angular-http-server localmente en modo prod en el puerto 8080
+        "localhost-prod": "angular-http-server -p 8080 --path ./dist/practica-final/browser"   ---> Arranca angular-http-server localmente en modo prod en el puerto 8080
 
 Se ha cofigurado el modo de instalación en lazy así como un mensaje para preguntar por la actualización y una comprobación de opciones 
 disponibles. 
@@ -66,11 +66,11 @@ Se sugiere marcar la opción 'Update on reload' dentro del inspector de Chrome/A
 
 Angular Universal
 
-npm run build:ssr
+        npm run build:ssr
 
-npm run build:client-and-server-bundles
+        npm run build:client-and-server-bundles
 
-node dist/practica-final/server/main.js   ---> Arranca node server en el puerto 4000
+        node dist/practica-final/server/main.js   ---> Arranca node server en el puerto 4000
 
 Arrancado, se puede comprobar si la carga de la página se está haciendo desde el server o el browser comprobando la consola 
 (al estar arrancado el server aparecerá 'server').
@@ -80,32 +80,32 @@ Arrancado, se puede comprobar si la carga de la página se está haciendo desde 
 
 Recomendable ejecutar: 
   
-  npm cache verify
-  
-  npm i webpack
-  
-  npm i --save web-animations-js
+        npm cache verify
+        
+        npm i webpack
+        
+        npm i --save web-animations-js
 
 
 - Generar la aplicación 
 
-    ng g @nrwl/angular:application wbde-country
+        ng g @nrwl/angular:application wbde-country
 
 - Agregar librería Elements de Angular
 
-    ng add @angular/elements
+         ng add @angular/elements
 
 - Generar el componente externo
 
-    ng add ngx-build-plus --project wbde-country
+        ng add ngx-build-plus --project wbde-country
 
 - Compatibilidad con navegadores
 
-    ng g ngx-build-plus:wc-polyfill --project wbde-country
+        ng g ngx-build-plus:wc-polyfill --project wbde-country
 
 - Build prod
 
-    ng build --prod --single-bundle --project wbde-country ---> single bundle
+        ng build --prod --single-bundle --project wbde-country ---> single bundle
 
 
 ### INTERNACIONALIZACIÓN

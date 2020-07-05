@@ -2,8 +2,8 @@
   "$schema": "../../node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
   "appData": {
-    "version": "2.0.0",
-    "changelog": "- New Styles /n- Better table rendering performance"
+    "version": "1.1.2",
+    "changelog": " New Styles & Better table rendering performance"
   },
   "assetGroups": [
     {
